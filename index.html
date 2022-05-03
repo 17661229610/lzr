@@ -1,0 +1,537 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>参赛作品首页</title>
+    <!-- Bootstrap Styles-->
+    <link href="./assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="./assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="./assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="./assets/css/custom-styles.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<style>
+    g rect{
+        background-color: red;
+    }
+</style>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><i class="fa fa-comments"></i> <strong>参赛作品 </strong></a>
+            </div>
+
+            
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+		<div id="sideNav" href=""><i class="fa fa-caret-right"></i></div>
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a class="active-menu" href="./index.html"><i class="fa fa-dashboard"></i> 数据看板</a>
+                    </li>
+                   
+                    <li>
+                        <a href="./pages/table.html"><i class="fa fa-table"></i> 数据处理</a>
+                    </li>
+                    <li>
+                        <a href="./pages/tab-panel.html"><i class="fa fa-table"></i> 数据分析</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            舆情数据看板 <small>大数据监控平台</small>
+                        </h1>
+						<ol class="breadcrumb">
+  <li><a href="#">主页</a></li>
+  <li><a href="#">分析看板</a></li>
+  <li class="active">数据看板</li>
+</ol>
+                    </div>
+                </div>
+				
+				
+                <!-- /. ROW  -->
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-green green">
+                            <div class="panel-left pull-left green">
+                                <i class="fa fa-bar-chart-o fa-5x"></i>
+                                
+                            </div>
+                            <div class="panel-right pull-right">
+								<h3>8,457</h3>
+                               <strong> 涉及内容</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-blue blue">
+                              <div class="panel-left pull-left blue">
+                                <i class="fa fa-shopping-cart fa-5x"></i>
+								</div>
+                                
+                            <div class="panel-right pull-right">
+							<h3>52,160 </h3>
+                               <strong> 总阅读量</strong>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-red red">
+                            <div class="panel-left pull-left red">
+                                <i class="fa fa fa-comments fa-5x"></i>
+                               
+                            </div>
+                            <div class="panel-right pull-right">
+							 <h3>15,823 </h3>
+                               <strong> 数据总量 </strong>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-brown brown">
+                            <div class="panel-left pull-left brown">
+                                <i class="fa fa-users fa-5x"></i>
+                                
+                            </div>
+                            <div class="panel-right pull-right">
+							<h3>36,752 </h3>
+                             <strong>参与人数</strong>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+			
+				<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-heading" style="font-size: 30px;">
+							数据分析：累计讨论量
+						</div>
+						
+                            <div class="col-md-12" style="padding-left: 0px;padding-right: 0px;">
+                                <div id="container1" style=" height: 800px;">q</div>
+                                <script language="JavaScript">
+                                    $(document).ready(function() {  
+                                       var chart = {
+                                          type: 'bar'
+                                       };
+                                       var title = {
+                                          text: '微博话题数据'   
+                                       };
+                                       var subtitle = {
+                                          text: '来源: weibo.org'  
+                                       };
+                                       var xAxis = {
+                                          categories: ['吃喝','快递','学习','减肥','娱乐活动','爱情','追剧','兼职','购物','运动'],
+                                          title: {
+                                             text: null
+                                          }
+                                       };
+                                       var yAxis = {
+                                          min: 0,
+                                          title: {
+                                             text: 'Population (millions)',
+                                             align: 'high'
+                                          },
+                                          labels: {
+                                             overflow: 'justify'
+                                          }
+                                       };
+                                       var tooltip = {
+                                          valueSuffix: ' millions'
+                                       };
+                                       var plotOptions = {
+                                          bar: {
+                                             dataLabels: {
+                                                enabled: true
+                                             }
+                                          }
+                                       };
+                                       var legend = {
+                                          layout: 'vertical',
+                                          align: 'right',
+                                          verticalAlign: 'top',
+                                          x: -40,
+                                          y: 0,
+                                          floating: true,
+                                          borderWidth: 1,
+                                          backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+                                          shadow: true
+                                       };
+                                       var credits = {
+                                          enabled: false
+                                       };
+                                       
+                                       var series= [{
+                                             name: '话题数量',
+                                                data: [430,535,135,169,317,67,162,203,380,80]
+                                            }, {
+                                                name: '持续时长',
+                                                data: [512,579,487,687,413,513,412,337,221,67]
+                                            }, {
+                                                name: '影响力指数',
+                                                data: [648.3,1258.5,329.7,709.8,939.1,302.1,593.5,1277.6,1690.4,543.8]      
+                                            }, {
+                                                name: '累计讨论量',
+                                                data: [165.0,455.3,295.8,709.8,839.1,345.7,532.4,1277.6,1510.4,622.3]      
+                                            }
+                                       ];     
+                                          
+                                       var json = {};   
+                                       json.chart = chart; 
+                                       json.title = title;   
+                                       json.subtitle = subtitle; 
+                                       json.tooltip = tooltip;
+                                       json.xAxis = xAxis;
+                                       json.yAxis = yAxis;  
+                                       json.series = series;
+                                       json.plotOptions = plotOptions;
+                                       json.legend = legend;
+                                       json.credits = credits;
+                                       $('#container1').highcharts(json);
+                                      
+                                    });
+                                    </script>
+                            </div>
+							
+						
+					</div>  
+					</div>		
+				</div> 
+				
+			
+		<div class="row">
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4 style="font-size: 25px;">快递话题</h4>
+						<div class="easypiechart" id="easypiechart-blue" data-percent="100" ><span class="percent">15104</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4 style="font-size: 25px;">购物话题</h4>
+						<div class="easypiechart" id="easypiechart-orange" data-percent="100" ><span class="percent">12776</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4 style="font-size: 25px;">娱乐话题</h4>
+						<div class="easypiechart" id="easypiechart-teal" data-percent="100" ><span class="percent">8091</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4 style="font-size: 25px;">学习话题</h4>
+						<div class="easypiechart" id="easypiechart-red" data-percent="100" ><span class="percent">7098</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+			
+				
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="font-size: 30px;">
+                                TOPSIS算法得分
+                            </div>
+                            <div class="col-md-12" style="padding: 10px 10px;">
+                                <div id="container3" style=" height: 400px;"></div>
+                                <script language="JavaScript">
+                                $(document).ready(function() {  
+                                var chart = {
+                                    type: 'column'
+                                };
+                                var title = {
+                                    text: '综合评价得分'   
+                                };
+                                var subtitle = {
+                                    text: '来源: 项目算法' ,
+                                    
+                                };
+                                var xAxis = {
+                                    categories: ['运动','吃喝','兼职','追剧','爱情','娱乐活动','减肥','学习','快递','购物'],
+                                    crosshair: true,
+                                    
+                                    
+                                };
+                                var yAxis = {
+                                    min: 0,
+                                    title: {
+                                        text: '得分'         
+                                    }      
+                                };
+                                var tooltip = {
+                                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                                        '<td style="padding:0;color:red"><b>{point.y:.1f} mm</b></td></tr>',
+                                    footerFormat: '</table>',
+                                    shared: true,
+                                    useHTML: true,
+                                    
+                                };
+                                var plotOptions = {
+                                    column: {
+                                        pointPadding: 0.2,
+                                        borderWidth: 0
+                                    }
+                                };  
+                                var credits = {
+                                    enabled: false,
+                                    backgroundColor:'red'
+                                };
+                                
+                                var series= [{
+                                        name: 'score',
+                                            data: [7.53, 8.456, 8.67, 8.846, 9.69, 10.2, 10.52,10.94, 12.2, 13.08],
+                                            
+                                        }];     
+                                    
+                                var json = {};   
+                                json.chart = chart; 
+                                json.title = title;   
+                                json.subtitle = subtitle; 
+                                json.tooltip = tooltip;
+                                json.xAxis = xAxis;
+                                json.yAxis = yAxis;  
+                                json.series = series;
+                                json.plotOptions = plotOptions;  
+                                json.credits = credits;
+                                $('#container3').highcharts(json);
+                                
+                                });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+				<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-heading" style="font-size: 30px;">
+							数据监控模块
+						</div>
+						<div class="panel-body">
+							<div id="morris-area-chart"></div>
+						</div>
+					</div>  
+					</div>		
+				</div> 	
+                <!-- /. ROW  -->
+
+	   
+				
+				
+				
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" >
+                                最新话题
+                            </div>
+                            <div class="panel-body">
+                                <div class="list-group">
+
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">7 minutes ago</span>
+                                        <i class="fa fa-fw fa-comment"></i> 骑摩托保安路过大学生堆瞬变鸡妈妈,LET ME TALK
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">16 minutes ago</span>
+                                        <i class="fa fa-fw fa-comment"></i> 封校后学校的操场也太热闹了
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">36 minutes ago</span>
+                                        <i class="fa fa-fw fa-comment"></i> 封校状态下的大学生
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">1 hour ago</span>
+                                        <i class="fa fa-fw fa-comment"></i> 酱椒夜聊
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">1.23 hour ago</span>
+                                        <i class="fa fa-fw fa-comment"></i> 当代大学生封校,运动就是坚持
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">yesterday</span>
+                                        <i class="fa fa-fw fa-comment"></i> 封校
+                                    </a>
+                                </div>
+                                <div class="text-right">
+                                    <a href="#">More Tasks <i class="fa fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-8 col-sm-12 col-xs-12">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                数据示例
+                            </div> 
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>编号</th>
+                                                <th>昵称</th>
+                                                <th>发布时间</th>
+                                                <th>发布工具</th>
+                                                <th>内容</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>炸毛的毛毛丶</td>
+                                                <td>2022-4-10  23:58:00</td>
+                                                <td>iPhone客户端</td>
+                                                <td>封校后第一次打羽毛球🏸️感觉运动还是蛮快乐的希望自己以后能多出去走走动动</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>苦水悶宝</td>
+                                                <td>2022-4-10 23:55
+                                                </td>
+                                                <td>iPhone客户端
+
+                                                </td>
+                                                <td>今天射箭教练给我穿护具时先夸我腰细又夸我漂亮，另外一个女教练笑容特灿烂还给了我零食哈哈，运动动力有！就很开心，她一直夸我一个小时射箭时间过好快！晚风里散步聊天也很开心！but封校了，我恨！
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>小灰尘牌净化器</td>
+                                                <td>2022-4-10 23:20
+                                                </td>
+                                                <td>Android
+
+                                                </td>
+                                                <td>麻麻说疫情封校不能出就能多背书看书作为妈宝女当然得听麻麻话多运动多看书
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>再抱五分钟</td>
+                                                <td>2022-4-10 23:16
+                                                </td>
+                                                <td>iPhone
+
+
+                                                </td>
+                                                <td>2022/04/10封校第十二天今天继续跳了操晚上生理期来了明天就先不运动了晚上想好好吃一顿这就是明天的盼头了晚安
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>落落日飞车</td>
+                                                <td>2022-4-10 21:43
+                                                </td>
+                                                <td>Android
+
+                                                </td>
+                                                <td>封校给自己养胖了本来运动量就只是上下课的路程这下好了网课本人为此陷入深深的担忧
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>姝淼333</td>
+                                                <td>2022-4-10 19:16
+                                                </td>
+                                                <td>iPhone客户端
+                                                </td>
+                                                <td>封校天天躺寝室里有时候真的会莫名烦躁心情不好💢但是运动一下跳跳下舒服多了
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+				
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <!-- <script src="assets/js/jquery-1.10.2.js"></script> -->
+    <!-- Bootstrap Js -->
+    <script src="./assets/js/bootstrap.min.js"></script>
+	 
+    <!-- Metis Menu Js -->
+    <script src="./assets/js/jquery.metisMenu.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="./assets/js/morris/rapshael-2.1.0.min.js"></script>
+    <script src="./assets/js/morris/morris.js"></script>
+	
+	
+	<script src="./assets/js/easypiechart.js"></script>
+	<script src="./assets/js/easypiechart-data.js"></script>
+	
+	
+    <!-- Custom Js -->
+    <script src="./assets/js/custom-scripts.js"></script>
+
+    
+</body>
+
+</html>

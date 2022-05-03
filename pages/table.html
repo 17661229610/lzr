@@ -1,0 +1,656 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数据处理</title>
+	<!-- Bootstrap Styles-->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FontAwesome Styles-->
+    <link href="../assets/css/font-awesome.css" rel="stylesheet" />
+     <!-- Morris Chart Styles-->
+   
+        <!-- Custom Styles-->
+    <link href="../assets/css/custom-styles.css" rel="stylesheet" />
+     <!-- Google Fonts-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+     <!-- TABLE STYLES-->
+    <link href="../assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">数据处理</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><i class="fa fa-comments"></i> <strong>参赛作品 </strong></a>
+            </div>
+
+        
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a  href="../index.html"><i class="fa fa-dashboard"></i> 数据看板</a>
+                    </li>
+                   
+                    <li>
+                        <a class="active-menu" href="./table.html"><i class="fa fa-table"></i> 数据处理</a>
+                    </li>
+                    <li>
+                        <a href="./tab-panel.html"><i class="fa fa-qrcode"></i> 数据分析</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+			 <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            数据处理<small>话题分析</small>
+                        </h1>
+                    </div>
+                </div> 
+                 <!-- /. ROW  -->
+               
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Advanced Tables -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                             标注员话题标注页面
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>博文</th>
+                                            <th>话题标注</th>
+                                            <th>标注员id</th>
+                                            <th>标记状态</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd gradeX">
+                                            <td>
+                                                <h5>
+                                                    #今年春游你去了哪儿#封校＋上网课生活：寝室、食堂、自习室
+                                                </h5>
+                                            </td>
+                                            <td>
+                                                <select class="form-control" >
+                                                    <option>运动</option>
+                                                    <option>吃喝</option>
+                                                    <option>兼职</option>
+                                                    <option>追剧</option>
+                                                    <option>爱情</option>
+                                                    <option>娱乐活动</option>
+                                                    <option>减肥</option>
+                                                    <option>学习</option>
+                                                    <option>快递</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <form role="form">
+                                                    <input class="form-control">
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <div class="btn btn-primary" style="margin-left: 10px;margin-right: 10px;">保存</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>
+                                                <h5>
+                                                    #封校的大学里永远不缺舞者#真羡慕不用上晚自习的不像我大冤种
+                                                </h5>
+                                            </td>
+                                            <td>
+                                                <select class="form-control" >
+                                                    <option>运动</option>
+                                                    <option>吃喝</option>
+                                                    <option>兼职</option>
+                                                    <option>追剧</option>
+                                                    <option>爱情</option>
+                                                    <option>娱乐活动</option>
+                                                    <option>减肥</option>
+                                                    <option>学习</option>
+                                                    <option>快递</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <form role="form">
+                                                    <input class="form-control">
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <div class="btn btn-primary" style="margin-left: 10px;margin-right: 10px;">保存</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>
+                                                <h5>
+                                                    #封校第二十六天#昨天三点睡的今天早上五点四十起来上早自习我竟然能起来！！！
+                                                </h5>
+                                            </td>
+                                            <td>
+                                                <select class="form-control" >
+                                                    <option>运动</option>
+                                                    <option>吃喝</option>
+                                                    <option>兼职</option>
+                                                    <option>追剧</option>
+                                                    <option>爱情</option>
+                                                    <option>娱乐活动</option>
+                                                    <option>减肥</option>
+                                                    <option>学习</option>
+                                                    <option>快递</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <form role="form">
+                                                    <input class="form-control">
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <div class="btn btn-primary" style="margin-left: 10px;margin-right: 10px;">保存</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>
+                                                <h5>
+                                                    自习完去打球🏸吗?#封校状态下的大学生#
+                                                </h5>
+                                            </td>
+                                            <td>
+                                                <select class="form-control" >
+                                                    <option>运动</option>
+                                                    <option>吃喝</option>
+                                                    <option>兼职</option>
+                                                    <option>追剧</option>
+                                                    <option>爱情</option>
+                                                    <option>娱乐活动</option>
+                                                    <option>减肥</option>
+                                                    <option>学习</option>
+                                                    <option>快递</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <form role="form">
+                                                    <input class="form-control">
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <div class="btn btn-primary" style="margin-left: 10px;margin-right: 10px;">保存</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>
+                                                <h5>
+                                                    #当代大学生封校日常#周末自习室！！！其实是没有抢到图书馆的位置哈哈哈哈哈哈
+                                                </h5>
+                                            </td>
+                                            <td>
+                                                <select class="form-control" >
+                                                    <option>运动</option>
+                                                    <option>吃喝</option>
+                                                    <option>兼职</option>
+                                                    <option>追剧</option>
+                                                    <option>爱情</option>
+                                                    <option>娱乐活动</option>
+                                                    <option>减肥</option>
+                                                    <option>学习</option>
+                                                    <option>快递</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <form role="form">
+                                                    <input class="form-control">
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <div class="btn btn-primary" style="margin-left: 10px;margin-right: 10px;">保存</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>
+                                                <h5>
+                                                    #青岛开学#明天开学，学校宿舍自习三天图啥呀？还封校。。。。。
+
+                                                </h5>
+                                            </td>
+                                            <td>
+                                                <select class="form-control" >
+                                                    <option>运动</option>
+                                                    <option>吃喝</option>
+                                                    <option>兼职</option>
+                                                    <option>追剧</option>
+                                                    <option>爱情</option>
+                                                    <option>娱乐活动</option>
+                                                    <option>减肥</option>
+                                                    <option>学习</option>
+                                                    <option>快递</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <form role="form">
+                                                    <input class="form-control">
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <div class="btn btn-primary" style="margin-left: 10px;margin-right: 10px;">保存</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>
+                                                <h5>
+                                                    今天是眼镜小妹#封校的大学生活#L海心的话的微博视频
+
+                                                </h5>
+                                            </td>
+                                            <td>
+                                                <select class="form-control" >
+                                                    <option>运动</option>
+                                                    <option>吃喝</option>
+                                                    <option>兼职</option>
+                                                    <option>追剧</option>
+                                                    <option>爱情</option>
+                                                    <option>娱乐活动</option>
+                                                    <option>减肥</option>
+                                                    <option>学习</option>
+                                                    <option>快递</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <form role="form">
+                                                    <input class="form-control">
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <div class="btn btn-primary" style="margin-left: 10px;margin-right: 10px;">保存</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>
+                                                <h5>
+                                                    #爹系傻狗自习室#回学校做封校小狗了，两百个单词，内科结束
+
+                                                </h5>
+                                            </td>
+                                            <td>
+                                                <select class="form-control" >
+                                                    <option>运动</option>
+                                                    <option>吃喝</option>
+                                                    <option>兼职</option>
+                                                    <option>追剧</option>
+                                                    <option>爱情</option>
+                                                    <option>娱乐活动</option>
+                                                    <option>减肥</option>
+                                                    <option>学习</option>
+                                                    <option>快递</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <form role="form">
+                                                    <input class="form-control">
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <div class="btn btn-primary" style="margin-left: 10px;margin-right: 10px;">保存</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>
+                                                <h5>
+                                                    自习时再玩手机我是狗汪汪这两声我先叫为敬#封校状态下的大学生##学习打卡#
+
+                                                </h5>
+                                            </td>
+                                            <td>
+                                                <select class="form-control" >
+                                                    <option>运动</option>
+                                                    <option>吃喝</option>
+                                                    <option>兼职</option>
+                                                    <option>追剧</option>
+                                                    <option>爱情</option>
+                                                    <option>娱乐活动</option>
+                                                    <option>减肥</option>
+                                                    <option>学习</option>
+                                                    <option>快递</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <form role="form">
+                                                    <input class="form-control">
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <div class="btn btn-primary" style="margin-left: 10px;margin-right: 10px;">保存</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>
+                                                <h5>
+                                                    说实话，这根本关不住想要出去的，关住的只有去图书馆自习的🌚😅#封校#
+
+                                                </h5>
+                                            </td>
+                                            <td>
+                                                <select class="form-control" >
+                                                    <option>运动</option>
+                                                    <option>吃喝</option>
+                                                    <option>兼职</option>
+                                                    <option>追剧</option>
+                                                    <option>爱情</option>
+                                                    <option>娱乐活动</option>
+                                                    <option>减肥</option>
+                                                    <option>学习</option>
+                                                    <option>快递</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <form role="form">
+                                                    <input class="form-control">
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <div class="btn btn-primary" style="margin-left: 10px;margin-right: 10px;">保存</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>
+                                                <h5>
+                                                    #今天吃什么#封校第五天～今天去了自习室啊还是学习的感觉好啊
+
+                                                </h5>
+                                            </td>
+                                            <td>
+                                                <select class="form-control" >
+                                                    <option>运动</option>
+                                                    <option>吃喝</option>
+                                                    <option>兼职</option>
+                                                    <option>追剧</option>
+                                                    <option>爱情</option>
+                                                    <option>娱乐活动</option>
+                                                    <option>减肥</option>
+                                                    <option>学习</option>
+                                                    <option>快递</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <form role="form">
+                                                    <input class="form-control">
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <div class="btn btn-primary" style="margin-left: 10px;margin-right: 10px;">保存</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>
+                                                <h5>
+                                                    #封校#自习室也才坐了一天，图三可能是今天最好的消息
+
+                                                </h5>
+                                            </td>
+                                            <td>
+                                                <select class="form-control" >
+                                                    <option>运动</option>
+                                                    <option>吃喝</option>
+                                                    <option>兼职</option>
+                                                    <option>追剧</option>
+                                                    <option>爱情</option>
+                                                    <option>娱乐活动</option>
+                                                    <option>减肥</option>
+                                                    <option>学习</option>
+                                                    <option>快递</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <form role="form">
+                                                    <input class="form-control">
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <div class="btn btn-primary" style="margin-left: 10px;margin-right: 10px;">保存</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>
+                                                <h5>
+                                                    封校了，唉#南京疫情#晚自习没了，体育课也线下了
+
+                                                </h5>
+                                            </td>
+                                            <td>
+                                                <select class="form-control" >
+                                                    <option>运动</option>
+                                                    <option>吃喝</option>
+                                                    <option>兼职</option>
+                                                    <option>追剧</option>
+                                                    <option>爱情</option>
+                                                    <option>娱乐活动</option>
+                                                    <option>减肥</option>
+                                                    <option>学习</option>
+                                                    <option>快递</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <form role="form">
+                                                    <input class="form-control">
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <div class="btn btn-primary" style="margin-left: 10px;margin-right: 10px;">保存</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>
+                                                <h5>
+                                                    #合肥疫情#是的我们已经封校了自习都不用去上了
+
+                                                </h5>
+                                            </td>
+                                            <td>
+                                                <select class="form-control" >
+                                                    <option>运动</option>
+                                                    <option>吃喝</option>
+                                                    <option>兼职</option>
+                                                    <option>追剧</option>
+                                                    <option>爱情</option>
+                                                    <option>娱乐活动</option>
+                                                    <option>减肥</option>
+                                                    <option>学习</option>
+                                                    <option>快递</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <form role="form">
+                                                    <input class="form-control">
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <div class="btn btn-primary" style="margin-left: 10px;margin-right: 10px;">保存</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd gradeX">
+                                            <td>
+                                                <h5>
+                                                    #小豫夜话#不知不觉间已经封校很久了，大家怀念在教室上课的日子嘛
+
+                                                </h5>
+                                            </td>
+                                            <td>
+                                                <select class="form-control" >
+                                                    <option>运动</option>
+                                                    <option>吃喝</option>
+                                                    <option>兼职</option>
+                                                    <option>追剧</option>
+                                                    <option>爱情</option>
+                                                    <option>娱乐活动</option>
+                                                    <option>减肥</option>
+                                                    <option>学习</option>
+                                                    <option>快递</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <form role="form">
+                                                    <input class="form-control">
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <div class="btn btn-primary" style="margin-left: 10px;margin-right: 10px;">保存</div>
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                    
+                                    
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!--End Advanced Tables -->
+                </div>
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            数据清洗
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>原始数据</th>
+                                            <th>#</th>
+                                            <th>清洗后的数据</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>#今天吃什么#封校第五天～今天去了自习室啊还是学习的感觉好啊</td>
+                                            <td>1</td>
+                                            <td>今天吃什么封校第五天今天去了自习室啊还是学习的感觉好啊</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>#今年春游你去了哪儿#封校＋上网课生活：寝室、食堂、自习室</td>
+                                            <td>1</td>
+                                            <td>今年春游你去了哪儿封校上网课生活寝室食堂自习室</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>#合肥疫情#是的我们已经封校了自习都不用去上了</td>
+                                            <td>1</td>
+                                            <td>合肥疫情是的我们已经封校了自习都不用去上了</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>#封校#自习室也才坐了一天，图三可能是今天最好的消息</td>
+                                            <td>1</td>
+                                            <td>封校自习室也才坐了一天图三可能是今天最好的消息</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <strong>数据的清洗主要包含内容：</strong>
+                                <small>[a-zA-Z0-9’!"#$%&\'()*+,-./:;<=>?@，。?★、…【】《》？“”‘’！[\\]^_`{|}~]+'</small>>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            数据分词
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>原始数据</th>
+                                            <th>#</th>
+                                            <th>清洗后的数据</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>今天吃什么封校第五天今天去了自习室啊还是学习的感觉好啊</td>
+                                            <td>1</td>
+                                            <td>今天 封校 第五天 今天 自习室 学习 感觉</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>今年春游你去了哪儿封校上网课生活寝室食堂自习室</td>
+                                            <td>1</td>
+                                            <td>今年 春游 去了哪 封校 上网课 寝室 食堂 自习室</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>合肥疫情是的我们已经封校了自习都不用去上了</td>
+                                            <td>1</td>
+                                            <td>合肥 疫情 封校 自习</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>封校自习室也才坐了一天图三可能是今天最好的消息</td>
+                                            <td>1</td>
+                                            <td>封校 自习室 最好消息</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <strong>使用jieba</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- /. ROW  -->
+
+                <!-- /. ROW  -->
+        </div>
+               
+    </div>
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+     <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="../assets/js/jquery-1.10.2.js"></script>
+      <!-- Bootstrap Js -->
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="../assets/js/jquery.metisMenu.js"></script>
+     <!-- DATA TABLE SCRIPTS -->
+    <script src="../assets/js/dataTables/jquery.dataTables.js"></script>
+    <script src="../assets/js/dataTables/dataTables.bootstrap.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#dataTables-example').dataTable();
+            });
+    </script>
+         <!-- Custom Js -->
+    <script src="assets/js/custom-scripts.js"></script>
+    
+   
+</body>
+</html>
